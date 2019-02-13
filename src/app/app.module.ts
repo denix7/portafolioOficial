@@ -11,6 +11,12 @@ import { ItemComponent } from './components/item/item.component';
 //routes
 import { app_routing } from "./app.routes";
 
+//services
+import { InformacionService } from "./services/informacion.service";
+
+//http module
+import { HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +28,12 @@ import { app_routing } from "./app.routes";
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    InformacionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
