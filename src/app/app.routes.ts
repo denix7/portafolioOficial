@@ -5,7 +5,7 @@ import { AboutComponent, PortafolioComponent, ItemComponent } from "./components
 const app_routes: Routes = [
     { path: 'home', component: PortafolioComponent },
     { path: 'about', component: AboutComponent},
-    { path: 'item', component: ItemComponent},
+    { path: 'item/:id', component: ItemComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 export const app_routing = RouterModule.forRoot(app_routes, {useHash:true});

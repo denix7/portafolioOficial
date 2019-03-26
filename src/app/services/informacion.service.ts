@@ -33,4 +33,8 @@ export class InformacionService {
           this.images = data as any;
         })
    }
+
+   public getItems(){
+     return this.http.get("https://portafoliodennis-e5901.firebaseio.com/items.json")
+   }
 }
